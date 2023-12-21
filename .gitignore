@@ -1,0 +1,3 @@
+img/samples/**/*.png
+!img/samples/**/00000.png
+**/*.mp4
