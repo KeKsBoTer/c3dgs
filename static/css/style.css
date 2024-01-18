@@ -212,31 +212,6 @@
 
 }
 
-#demos {
-    position: relative;
-}
-
-#demos .demo-card {
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
-}
-
-#demos::after {
-    content: "Coming soon";
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 50%;
-    right: calc(50%-5rem);
-    width: 10rem;
-    z-index: 100;
-    background-color: black;
-    padding: 1rem;
-    /* border: 1px solid black; */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(12, 12, 12, 0.3);
-}
 
 .button[disabled]:hover:after {
     content: "Coming soon";
@@ -265,4 +240,13 @@
 
 .results-carousel video {
     margin: 0;
+}
+
+.publication-links{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }

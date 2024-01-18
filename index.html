@@ -55,7 +55,7 @@
                 <div class="container is-max-desktop">
                     <div class="columns is-centered">
                         <div class="column has-text-centered">
-                            <h1 class="title is-1 publication-title">Compressed 3D Gaussian Splatting for Accelerated
+                            <h1 class="title is-1 is-size-3-mobile publication-title">Compressed 3D Gaussian Splatting for Accelerated
                                 Novel View Synthesis</h1>
                             <div class="is-size-5 publication-authors">
                                 <span class="author-block">
@@ -63,7 +63,7 @@
                                 <span class="author-block">
                                     Josef Stumpfegger,</span>
                                 <span class="author-block">
-                                    Rüdiger Westermann,
+                                    Rüdiger Westermann
                                 </span>
                             </div>
 
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                     <div style="height: 1rem;"></div>
-                    <h2 class="subtitle has-text-centered">
+                    <h2 class="subtitle has-text-centered is-size-6-mobile">
                         Compressing 3D Gaussian Splats up to 31x (26x avg.) for reduced storage requirements and
                         accelerated novel view synthesis.
                     </h2>
@@ -158,7 +158,7 @@
         </section>
 
         <section class="section">
-            <div class="container is-max-desktop">
+            <div class="container is-max-desktop is-mobile">
                 <!-- Abstract. -->
                 <div class="columns is-centered">
                     <div class="column is-four-fifths">
@@ -189,7 +189,7 @@
 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <div class="columns is-centered" style="margin-bottom: 3rem;">
+                <div class="is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Compression Method</h2>
                 </div>
                 <p>
@@ -213,7 +213,7 @@
                         run-length encoding.</li>
                 </ul>
                 <br>
-                <div class="columns is-centered ">
+                <div class="is-centered ">
                     <img src="static/img/pipeline.svg">
                 </div>
             </div>
@@ -221,7 +221,7 @@
 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <div class="columns is-centered" style="margin-bottom: 3rem;">
+                <div class="is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Rendering</h2>
                 </div>
                 <p>
@@ -240,16 +240,16 @@
                 </p>
                 <p>The renderer is implemented with the WebGPU graphics
                     API in the Rust programming language. Thus, it can run in
-                    a modern web browser on a large variety of devices.</p>
+                    a modern web browser on a large variety of devices. A demo can be found below.</p>
                 <p>The source code for our renderer can be found <a
-                        href="https://github.com/KeKsBoTer/web-splat">here</a></p>
+                        href="https://github.com/KeKsBoTer/web-splat">here</a>.</p>
             </div>
         </section>
 
 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <div class="columns is-centered" style="margin-bottom: 3rem;">
+                <div class="is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Results</h2>
                 </div>
                 <p>
@@ -271,14 +271,14 @@
 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <div class="columns is-centered" style="margin-bottom: 3rem;">
+                <div class="is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Interactive Web Demo</h2>
                 </div>
                 <div class="columns is-centered has-text-centered is-multiline" id="demos">
                     <div class="column demo-card">
                         <div class="card">
-                            <a
-                                href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
+                            <a target="_blank"
+                                href="https://keksboter.github.io/web-splat/?file=./scenes/bicycle/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/bicycle/cameras.json">
                                 <div class="card-image">
                                     <figure class="image">
                                         <img src="static/img/samples/bicycle/ours/00000.png" alt="Placeholder image">
@@ -304,8 +304,8 @@
                     </div>
                     <div class="column demo-card">
                         <div class="card">
-                            <a
-                                href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
+                            <a target="_blank"
+                                href="https://keksboter.github.io/web-splat/?file=./scenes/garden/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/garden/cameras.json">
                                 <div class="card-image">
                                     <figure class="image">
                                         <img src="static/img/samples/garden/ours/00000.png" alt="Placeholder image">
@@ -331,8 +331,8 @@
                     </div>
                     <div class="column demo-card">
                         <div class="card">
-                            <a
-                                href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
+                            <a target="_blank"
+                                href="https://keksboter.github.io/web-splat/?file=./scenes/truck/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/truck/cameras.json">
                                 <div class="card-image">
                                     <figure class="image">
                                         <img src="static/img/samples/truck/ours/00000.png" alt="Placeholder image">
@@ -358,8 +358,8 @@
                     </div>
                     <div class="column demo-card">
                         <div class="card">
-                            <a
-                                href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
+                            <a target="_blank"
+                                href="https://keksboter.github.io/web-splat/?file=./scenes/playroom/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/playroom/cameras.json">
                                 <div class="card-image">
                                     <figure class="image">
                                         <img src="static/img/samples/playroom/ours/00000.png" alt="Placeholder image">
@@ -385,7 +385,7 @@
                     </div>
                     <div class="column demo-card">
                         <div class="card">
-                            <a
+                            <a target="_blank"
                                 href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
                                 <div class="card-image">
                                     <figure class="image">
@@ -412,7 +412,7 @@
                     </div>
                     <div class="column demo-card">
                         <div class="card">
-                            <a
+                            <a target="_blank"
                                 href="https://keksboter.github.io/web-splat/public/?file=https://github.com/KeKsBoTer/web-splat/raw/wasm/public/scenes/bonsai/point_cloud/iteration_35000/point_cloud.npz">
                                 <div class="card-image">
                                     <figure class="image">
@@ -448,8 +448,10 @@
                 <div class="columns is-centered has-text-centered">
                     <h2 class="title is-3">Examples</h2>
                 </div>
+                <div class="column">
                 <p>Image comparisons for the baseline and compressed reconstruction. All images are taken from the test
                     set.</p>
+                </div>
                 <div class="columns is-centered has-text-centered">
                     <!-- Visual Effects. -->
                     <div class="column">
@@ -595,8 +597,8 @@
             <div class="container is-max-desktop">
 
                 <!-- Concurrent Work. -->
-                <div class="columns is-centered">
-                    <div class="column is-full-width">
+                <div class="is-centered">
+                    <div class="is-full-width">
                         <h2 class="title is-3">Concurrent Work</h2>
 
                         <div class="content has-text-justified">
@@ -612,8 +614,10 @@
                                     Radiance Field Models with Vector Quantization</a>
                             </p>
                             <p>
-                                <a href="https://arxiv.org/abs/2311.13681">Compact 3D Gaussian Representation for
-                                    Radiance Field</a>
+                                <a href="https://arxiv.org/abs/2311.13681">Compact 3D Gaussian Representation for Radiance Field</a>
+                            </p>
+                            <p>
+                                <a href="https://fraunhoferhhi.github.io/Self-Organizing-Gaussians/">Compact 3D Scene Representation via Self-Organizing Gaussian Grids</a>
                             </p>
                         </div>
                     </div>
