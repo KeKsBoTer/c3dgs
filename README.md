@@ -1,6 +1,6 @@
 # Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis
 
-[Arxiv](https://arxiv.org/abs/2401.02436) | [Project Page](https://keksboter.github.io/compressed-3dgs)
+[Arxiv](https://arxiv.org/abs/2401.02436) | [Project Page](https://keksboter.github.io/c3dgs)
 
 ## Abstract
 Recently, high-fidelity scene reconstruction with an optimized 3D Gaussian splat representation has been introduced for novel view synthesis from sparse image sets. Making such representations suitable for applications like network streaming and rendering on low-power devices requires significantly reduced memory consumption as well as improved rendering efficiency.
