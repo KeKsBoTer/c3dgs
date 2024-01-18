@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css";
 
 
 .bal-container-small {
@@ -209,4 +210,59 @@
     height: 200px;
     object-fit: cover;
 
+}
+
+#demos {
+    position: relative;
+}
+
+#demos .demo-card {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+#demos::after {
+    content: "Coming soon";
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: calc(50%-5rem);
+    width: 10rem;
+    z-index: 100;
+    background-color: black;
+    padding: 1rem;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(12, 12, 12, 0.3);
+}
+
+.button[disabled]:hover:after {
+    content: "Coming soon";
+    color: white;
+    background-color: black;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 100;
+    padding: 0.1rem 0.3rem;
+    bottom: -2rem;
+}
+
+
+.results-carousel {
+    overflow: hidden;
+}
+
+.results-carousel .item {
+    margin: 2rem 1rem;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+}
+
+.results-carousel video {
+    margin: 0;
 }

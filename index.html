@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js "></script>
+
 
         <link rel="stylesheet" href="static/css/style.css">
         <script src="static/js/script.js"></script>
@@ -73,7 +75,8 @@
                                 <div class="publication-links">
                                     <!-- PDF Link. -->
                                     <span class="link-block">
-                                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                                        <a href="https://arxiv.org/pdf/2401.02436.pdf"
+                                            class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="fas fa-file-pdf"></i>
                                             </span>
@@ -81,27 +84,16 @@
                                         </a>
                                     </span>
                                     <span class="link-block">
-                                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                                        <a href="https://arxiv.org/abs/2401.02436"
+                                            class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="ai ai-arxiv"></i>
                                             </span>
                                             <span>arXiv</span>
                                         </a>
                                     </span>
-                                    <!-- Video Link. -->
-                                    <!-- <span class="link-block">
-                                        <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                                            class="external-link button is-normal is-rounded is-dark">
-                                            <span class="icon">
-                                                <i class="fab fa-youtube"></i>
-                                            </span>
-                                            <span>Video</span>
-                                        </a>
-                                    </span> -->
-                                    <!-- Code Link. -->
                                     <span class="link-block">
-                                        <a href="https://github.com/KeKsBoTeR"
-                                            class="external-link button is-normal is-rounded is-dark">
+                                        <a href="" disabled class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="fab fa-github"></i>
                                             </span>
@@ -110,7 +102,7 @@
                                     </span>
                                     <!-- Dataset Link. -->
                                     <span class="link-block">
-                                        <a href="" class="external-link button is-normal is-rounded is-dark">
+                                        <a href="" disabled class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
                                                 <i class="far fa-images"></i>
                                             </span>
@@ -126,11 +118,36 @@
         </section>
 
         <section class="hero teaser is-light">
-            <div class="container is-max-desktop">
-                <div class="hero-body">
-                    <video id="teaser" autoplay muted loop playsinline height="100%">
-                        <source src="static/video/teaser.mp4" type="video/mp4">
-                    </video>
+            <div class="hero-body">
+                <div class="container">
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-bonsai">
+                            <video poster="" id="bonsai" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/bonsai.mp4" type="video/mp4">
+                            </video>
+
+                        </div>
+                        <div class="item item-bicycle">
+                            <video poster="" id="bicycle" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/bicycle.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-garden">
+                            <video poster="" id="garden" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/garden.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-truck">
+                            <video poster="" id="truck" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/truck.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-playroom">
+                            <video poster="" id="playroom" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/playroom.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                     <div style="height: 1rem;"></div>
                     <h2 class="subtitle has-text-centered">
                         Compressing 3D Gaussian Splats up to 31x (26x avg.) for reduced storage requirements and
@@ -154,29 +171,19 @@
                             rendering efficiency.<br>
                             We propose a compressed 3D Gaussian splat representation that utilizes sensitivity-aware
                             vector clustering with quantization-aware training to compress directional colors and
-                            Gaussian parameters. The learned codebooks have low bitrates and achieve a <strong>compression rate
-                            of up to 31x</strong> on real-world scenes with only minimal degradation of visual quality.
+                            Gaussian parameters. The learned codebooks have low bitrates and achieve a
+                            <strong>compression rate
+                                of up to 31x</strong> on real-world scenes with only minimal degradation of visual
+                            quality.
                             We demonstrate that the compressed splat representation can be efficiently rendered with
-                            hardware rasterization on lightweight GPUs at up to <strong>4x higher framerates</strong> than reported via
+                            hardware rasterization on lightweight GPUs at up to <strong>4x higher framerates</strong>
+                            than reported via
                             an optimized GPU compute pipeline.
                             Extensive experiments across multiple datasets demonstrate the robustness and rendering
                             speed of the proposed approach.
                         </div>
                     </div>
                 </div>
-                <!--/ Abstract. -->
-
-                <!-- Paper video. -->
-                <!-- <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <h2 class="title is-3">Video</h2>
-                        <div class="publication-video">
-                            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0showinfo=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div> -->
-                <!--/ Paper video. -->
             </div>
         </section>
 
@@ -185,15 +192,25 @@
                 <div class="columns is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Compression Method</h2>
                 </div>
-                <p>          
-                    We address the storage and rendering issue of 3D Gaussian Splatting (3DGS) by compressing the reconstructed scene parameters and rendering the compressed representation via GPU rasterization. 
-                    To compress the scenes, we first analyze its components and observe that the Spherical Harmonics (SH) coefficients and the multivariate Gaussian parameters take up the majority of storage space and are highly redundant.
+                <p>
+                    We address the storage and rendering issue of 3D Gaussian Splatting (3DGS) by compressing the
+                    reconstructed scene parameters and rendering the compressed representation via GPU rasterization.
+                    To compress the scenes, we first analyze its components and observe that the Spherical Harmonics
+                    (SH) coefficients and the multivariate Gaussian parameters take up the majority of storage space and
+                    are highly redundant.
                     Our compression pipeline consists of three steps:
                 </p>
-                <ul> 
-                    <li style="padding: 0.5rem;"> <strong>Sensitivity-aware clustering:</strong> We derive a sensitivity measure for each scene parameter by calculating its contribution to the training images. Color information and Gaussian parameters are encoded into compact codebooks via sensitivity-aware vector quantization. </li>
-                    <li style="padding: 0.5rem;"> <strong>Quantization-aware fine-tuning:</strong> To regain information that is lost during clustering we fine-tune the scene parameters at reduced bit-rates using quantization-aware training.</li>
-                   <li style="padding: 0.5rem;"> <strong>Entropy encoding:</strong> 3D Gaussians are linearized along a space-filling curve to exploit the spatial coherence of scene parameters with entropy and run-length encoding.</li>
+                <ul>
+                    <li style="padding: 0.5rem;"> <strong>Sensitivity-aware clustering:</strong> We derive a sensitivity
+                        measure for each scene parameter by calculating its contribution to the training images. Color
+                        information and Gaussian parameters are encoded into compact codebooks via sensitivity-aware
+                        vector quantization. </li>
+                    <li style="padding: 0.5rem;"> <strong>Quantization-aware fine-tuning:</strong> To regain information
+                        that is lost during clustering we fine-tune the scene parameters at reduced bit-rates using
+                        quantization-aware training.</li>
+                    <li style="padding: 0.5rem;"> <strong>Entropy encoding:</strong> 3D Gaussians are linearized along a
+                        space-filling curve to exploit the spatial coherence of scene parameters with entropy and
+                        run-length encoding.</li>
                 </ul>
                 <br>
                 <div class="columns is-centered ">
@@ -207,9 +224,25 @@
                 <div class="columns is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Rendering</h2>
                 </div>
-                <p> 
-                    We use rasterization         
+                <p>
+                    Gaussians are rendered in sorted order via GPU rasterization. For each Gaussian, one planar
+                    quad (a so-called splat) consisting of two triangles is rendered. A vertex shader computes the
+                    screen space vertex
+                    positions of each splat from the 2D covariance information.
+                    The size of a splat is set such that it covers the 99% confidence interval of the projected
+                    Gaussian. The vertex shader
+                    simply outputs the color computed in the pre-pass and the
+                    2D splat center as input to the pixel shader. The pixel shader
+                    then discards fragments outside the 99% confidence interval. All remaining fragments use their
+                    distance to the splat
+                    center to compute the exponential color and opacity falloff
+                    and blend their final colors into the framebuffer.
                 </p>
+                <p>The renderer is implemented with the WebGPU graphics
+                    API in the Rust programming language. Thus, it can run in
+                    a modern web browser on a large variety of devices.</p>
+                <p>The source code for our renderer can be found <a
+                        href="https://github.com/KeKsBoTer/web-splat">here</a></p>
             </div>
         </section>
 
@@ -220,13 +253,16 @@
                     <h2 class="title is-3">Results</h2>
                 </div>
                 <p>
-                    We evaluate our method on 13 real scenes and the NeRF Synthesis dataset. Our method achieves a 26x compression rate on average on real scenes at minimal loss in visual quality. 
-                    Our rasterization based renderer achieves a 3.5x speedup for the compressed scenes compared to the compute shader based renderer of Kerbl et al.
-                    The FPS measures shown below were obtained on the bicycle scene from Mip-NeRF360 on an NVIDIA GeForce A5000.
+                    We evaluate our method on 13 real scenes and the NeRF Synthesis dataset. Our method achieves a 26x
+                    compression rate on average on real scenes at minimal loss in visual quality.
+                    Our rasterization based renderer achieves a 3.5x speedup for the compressed scenes compared to the
+                    compute shader based renderer of Kerbl et al.
+                    The FPS measures shown below were obtained on the bicycle scene from Mip-NeRF360 on an NVIDIA
+                    GeForce A5000.
                 </p>
                 <div class="columns is-centered has-text-centered is-multiline">
                     <div class="column">
-                        <img src="static/img/plot_summary.svg"/>
+                        <img src="static/img/plot_summary.svg" />
                     </div>
                 </div>
             </div>
@@ -238,7 +274,7 @@
                 <div class="columns is-centered" style="margin-bottom: 3rem;">
                     <h2 class="title is-3">Interactive Web Demo</h2>
                 </div>
-                <div class="columns is-centered has-text-centered is-multiline">
+                <div class="columns is-centered has-text-centered is-multiline" id="demos">
                     <div class="column demo-card">
                         <div class="card">
                             <a
@@ -412,7 +448,8 @@
                 <div class="columns is-centered has-text-centered">
                     <h2 class="title is-3">Examples</h2>
                 </div>
-                <p>Image comparisons for the baseline and compressed reconstruction. All images are taken from the test set.</p>
+                <p>Image comparisons for the baseline and compressed reconstruction. All images are taken from the test
+                    set.</p>
                 <div class="columns is-centered has-text-centered">
                     <!-- Visual Effects. -->
                     <div class="column">
@@ -588,10 +625,13 @@
         <section class="section" id="BibTeX">
             <div class="container is-max-desktop content">
                 <h2 class="title">BibTeX</h2>
-                <pre><code>@article{niedermayr2023c3dgs,
-    author    = {Niederamyr, Simon and Stumpfegger, Josef and Westermann, Rüdiger},
-    title     = {Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis},
-    year      = {2023},
+                <pre><code>@misc{niedermayr2023compressed,
+    title={Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis}, 
+    author={Simon Niedermayr and Josef Stumpfegger and Rüdiger Westermann},
+    year={2023},
+    eprint={2401.02436},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }</code></pre>
             </div>
         </section>
@@ -623,7 +663,29 @@
             for (var elm of document.querySelectorAll(".image-compare")) {
                 new BeforeAfter(elm)
             }
+            var options = {
+                slidesToScroll: 1,
+                slidesToShow: 3,
+                loop: true,
+                infinite: true,
+                autoplay: false,
+                autoplaySpeed: 3000,
+            }
 
+            // Initialize all div with carousel class
+            var carousels = bulmaCarousel.attach('.carousel', options);
+
+            for (var i = 0; i < carousels.length; i++) {
+                // Add listener to  event
+                carousels[i].on('before:show', () => { });
+            }
+
+            // Access to bulmaCarousel instance of an element
+            var element = document.querySelector('#my-element');
+            if (element && element.bulmaCarousel) {
+                // bulmaCarousel instance is available as element.bulmaCarousel
+                element.bulmaCarousel.on('before-show', () => { });
+            }
         </script>
     </body>
 
