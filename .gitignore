@@ -1,3 +1,10 @@
 docs/img/samples/**/*.png
 !docs/img/samples/**/00000.png
 # **/*.mp4
+
+**/__pycache__
+eval_vq/
+models/
+**/build/
+**/*.so
+scripts/

@@ -1,0 +1,19 @@
+name: c3dgs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+  - pyg
+dependencies:
+  - plyfile=0.8.1
+  - python=3.8
+  - pip=22.3.1
+  - pytorch-cuda=12.1
+  - cuda-toolkit=12.1
+  - torchvision
+  - pytorch-scatter
+  - tqdm
+  - pip:
+    - submodules/diff-gaussian-rasterization
+    - submodules/weighted_distance
