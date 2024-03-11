@@ -12,6 +12,7 @@ dependencies:
   - pytorch-cuda=12.1
   - cuda-toolkit=12.1
   - torchvision
+  - pip
   - pytorch-scatter
   - tqdm
   - pip:
