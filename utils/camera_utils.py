@@ -11,10 +11,32 @@
 
 from scene.cameras import Camera
 import numpy as np
+import torch
 from utils.general_utils import PILtoTorch
 from utils.graphics_utils import fov2focal
 
 WARNED = False
+
+class LazyCameraLoader:
+    def __init__(self, cam_infos, resolution_scale, args):
+        self.cam_infos = cam_infos
+        self.resolution_scale = resolution_scale
+        self.args = args
+
+    def get_camera(self, index):
+        cam_info = self.cam_infos[index]
+        return loadCam(self.args, index, cam_info, self.resolution_scale)
+
+    def __len__(self):
+        return len(self.cam_infos)
+
+    def __getitem__(self, index):
+        return self.get_camera(index)
+
+    def __iter__(self):
+        for index in range(len(self.cam_infos)):
+            yield self.get_camera(index)
+            torch.cuda.empty_cache()
 
 def loadCam(args, id, cam_info, resolution_scale):
     orig_w, orig_h = cam_info.image.size
@@ -52,12 +74,7 @@ def loadCam(args, id, cam_info, resolution_scale):
                   image_name=cam_info.image_name, uid=id, data_device=args.data_device)
 
 def cameraList_from_camInfos(cam_infos, resolution_scale, args):
-    camera_list = []
-
-    for id, c in enumerate(cam_infos):
-        camera_list.append(loadCam(args, id, c, resolution_scale))
-
-    return camera_list
+    return LazyCameraLoader(cam_infos, resolution_scale, args)
 
 def camera_to_JSON(id, camera : Camera):
     Rt = np.zeros((4, 4))
