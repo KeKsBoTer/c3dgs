@@ -48,7 +48,7 @@ Please refer to the [original 3D Gaussian Splatting repository](https://github.c
 
 ### Cloning the Repository
 ```
-git clone https://github.com/KeKsBoTer/c3gds
+git clone https://github.com/KeKsBoTer/c3dgs
 ```
 
 ### Setup 
