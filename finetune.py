@@ -24,7 +24,6 @@ def finetune(scene: Scene, dataset, opt, comp, pipe, testing_iterations, debug_f
     scene.gaussians.training_setup(opt)
     scene.gaussians.update_learning_rate(first_iter)
 
-    viewpoint_stack = None
     ema_loss_for_log = 0.0
     progress_bar = tqdm(range(first_iter, max_iter), desc="Training progress")
     first_iter += 1
@@ -32,9 +31,7 @@ def finetune(scene: Scene, dataset, opt, comp, pipe, testing_iterations, debug_f
         iter_start.record()
 
         # Pick a random Camera
-        if not viewpoint_stack:
-            viewpoint_stack = scene.getTrainCameras().copy()
-        viewpoint_cam = viewpoint_stack.pop(randint(0, len(viewpoint_stack) - 1))
+        viewpoint_cam = next(iter(scene.getTrainCameras()))
 
         # Render
         if (iteration - 1) == debug_from:
@@ -54,6 +51,10 @@ def finetune(scene: Scene, dataset, opt, comp, pipe, testing_iterations, debug_f
             1.0 - ssim(image, gt_image)
         )
         loss.backward()
+
+        # Free up memory
+        del viewpoint_cam
+        torch.cuda.empty_cache()
 
         iter_end.record()
         scene.gaussians.update_learning_rate(iteration)

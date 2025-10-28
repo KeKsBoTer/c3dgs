@@ -28,6 +28,7 @@ from finetune import finetune
 from utils.image_utils import psnr
 from utils.loss_utils import ssim
 
+from utils.camera_utils import LazyCameraLoader
 
 def unique_output_folder():
     if os.getenv("OAR_JOB_ID"):
@@ -71,6 +72,10 @@ def calc_importance(
         loss = rendering.sum()
         loss.backward()
         num_pixels += rendering.shape[1]*rendering.shape[2]
+
+        # Free up memory
+        del camera
+        torch.cuda.empty_cache()
 
     importance = torch.cat(
         [gaussians._features_dc.grad, gaussians._features_rest.grad],
